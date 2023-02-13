@@ -1,7 +1,7 @@
 c=gcc
 op=-Wall -Wextra
 
-all : es.o livre.o biblio.o tpBiblio.c 	
+all : clean es.o livre.o biblio.o tpBiblio.c 	
 	$(c) $(op)  es.o livre.o biblio.o tpBiblio.c -o exe
 
 es.o : es.c
@@ -11,3 +11,6 @@ livre.o : livre.c
 biblio.o : biblio.c
 	$(c) $(op) -c biblio.c	
 
+clean:
+	rm -rf exe
+	rm -rf *.o
