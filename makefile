@@ -14,3 +14,4 @@ biblio.o : biblio.c
 clean:
 	rm -rf exe
 	rm -rf *.o
+ 
